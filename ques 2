@@ -1,0 +1,25 @@
+import java.io.File;
+
+public class ChangeFilePermissions {
+    public static void main(String[] args) {
+            System.out.println("Sakshi 24csu288");
+                File file = new File("C:\\Users\\sainik computers\\Desktop\\cppcodes\\java\\ClassAndInterfaceDemo.class");
+                if (file.exists()) {
+            System.out.println("Original Permissions:");
+            System.out.println("Readable: " + file.canRead());
+            System.out.println("Writable: " + file.canWrite());
+            System.out.println("Executable: " + file.canExecute());
+
+            file.setReadable(true);
+            file.setWritable(false);   
+            file.setExecutable(true);
+
+            System.out.println("\nUpdated Permissions:");
+            System.out.println("Readable: " + file.canRead());
+            System.out.println("Writable: " + file.canWrite());
+            System.out.println("Executable: " + file.canExecute());
+        } else {
+            System.out.println("File not found at specified path.");
+        }
+    }
+}

@@ -1,0 +1,22 @@
+import java.io.File;
+
+public class CheckFileOrDirectory {
+    public static void main(String[] args) {
+        System.out.println("Sakshi 24csu288");  
+
+        // Corrected file path (double backslashes, single pair of quotes)
+        File file = new File("C:\\Users\\sainik computers\\Desktop\\cppcodes\\java\\ClassAndInterfaceDemo.class");
+
+        if (file.exists()) {
+            System.out.println("File/Directory exists.");
+
+            if (file.isFile()) {
+                System.out.println("It is a File.");
+            } else if (file.isDirectory()) {
+                System.out.println("It is a Directory.");
+            }
+        } else {
+            System.out.println("The specified file or directory does not exist.");
+        }
+    }
+}

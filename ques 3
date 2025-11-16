@@ -1,0 +1,25 @@
+import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class SimpleReadWrite {
+    public static void main(String[] args) {
+   System.out.println("Sakshi 24csu288 " );
+        try {
+            FileWriter writer = new FileWriter("sample.txt");
+            writer.write("Hello, this is a simple file handling example in Java.");
+            writer.close();
+            System.out.println("Data written successfully.");
+
+            FileReader reader = new FileReader("sample.txt");
+            int i;
+            System.out.print("File contents: ");
+            while ((i = reader.read()) != -1) {
+                System.out.print((char) i);
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
